@@ -1,12 +1,15 @@
+# 设置默认模型
+model = "gpt-5.4"
+
+# 设置默认供应商
+model_provider = "minimax"
+
+# 供应商定义
 [model_providers.minimax]
 name = "MiniMax Chat Completions API"
 base_url = "http://0.0.0.0:8000"
 wire_api = "responses"
 requires_openai_auth = false
-request_max_retries = 4
-stream_max_retries = 10
-stream_idle_timeout_ms = 300000
 
-[profiles.m27]
-model = "gpt-5.4"
-model_provider = "minimax"
+[features]
+shell_snapshot = false
